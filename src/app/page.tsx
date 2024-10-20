@@ -9,8 +9,8 @@ Amplify.configure(outputs);
 const client = generateClient<Schema>();
 
 export default function Home() {
-  const sayHello = () => {
-    const res = client.queries.sayHello({
+  const sayHello = async () => {
+    const res = await client.queries.sayHello({
       name: "Amplify"
     })
     console.log(`result=${JSON.stringify(res)}`);
