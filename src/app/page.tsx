@@ -15,11 +15,19 @@ export default function Home() {
     })
     console.log(`result=${JSON.stringify(res)}`);
   }
+  
+  const sayGoodbye = async () => {
+    const res = await client.queries.sayGoodbye({
+      name: "Amplify"
+    })
+    console.log(`result=${JSON.stringify(res)}`);
+  }
 
   return (
     <>
       <h1>Hello Nibble Amplify</h1>
       <button onClick={sayHello}>sayHello</button>
+      <button onClick={sayGoodbye}>sayGoodbye</button>
     </>
   );
 }
