@@ -1,4 +1,5 @@
 import { env } from '$amplify/env/say-hello';
+// import { env } from '$amplify/env/say-goodbye';
 import type { Schema } from "../../data/resource";
 
 export const handler: Schema["sayGoodbye"]["functionHandler"] = async (event) => {
